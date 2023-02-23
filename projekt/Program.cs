@@ -10,7 +10,38 @@ namespace projekt
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("elo elo");
+            string[] monthname =
+            {
+                "styczeń",
+                "luty",
+                "marzec",
+                "kwiecień",
+                "maj",
+                "czerwiec",
+                "lipiec",
+                "sierpień",
+                "wrzesień",
+                "październik",
+                "listopad",
+                "grudzień"
+            };
+
+            Console.WriteLine(monthname[0]);
+            foreach (string month in monthname)
+            {
+                Console.WriteLine(month);
+            }
+            foreach (string month in monthname) { 
+                Console.WriteLine(month);
+            }
+            
+
+            Console.WriteLine("1-styczeń, 2-luty, 3-marzec, itd.");
+            Console.Write("podaj numer miesiąca: ");
+
+            int choosenMonth = int.Parse(Console.ReadLine());
+            Console.WriteLine($"miesiąc: {monthname[choosenMonth - 1]}");
+
         }
     }
 }
